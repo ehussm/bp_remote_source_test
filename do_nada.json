@@ -1,0 +1,206 @@
+{
+    "any_group_can_deploy": true,
+    "auto_historical_resources": false,
+    "blueprint_image": null,
+    "deployment_items": [
+        {
+            "action_name": "No op",
+            "continue_on_failure": false,
+            "deploy_seq": 1,
+            "description": null,
+            "execute_in_parallel": false,
+            "id": "BDI-psgrrerk",
+            "name": "No op",
+            "run_on_scale_up": true,
+            "show_on_order_form": true,
+            "tier_type": "plugin"
+        },
+        {
+            "continue_on_failure": false,
+            "deploy_seq": 2,
+            "description": "For quickly generating successful orders",
+            "execute_in_parallel": false,
+            "id": "BDI-cfbmhe5v",
+            "name": "test_easy_order_success_with_input",
+            "restrict_execution_scope": true,
+            "show_on_order_form": true,
+            "tier_type": "blueprint"
+        }
+    ],
+    "description": "",
+    "favorited": false,
+    "id": "BP-gjcebs9u",
+    "is_manageable": true,
+    "is_orderable": true,
+    "labels": [],
+    "last_updated": "2023-03-16",
+    "management_actions": [],
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "Do Nada",
+    "parameters": [
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "constraints": "Unconstrained",
+            "description": "Used to calculate the expected rate of new servers. Additionally, during VMware provisioning, when the \"Extend Primary Disk During Provisioning\" parameter is true, the root disk is extended to this value.",
+            "destination": "Both",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "label": "Disk Size",
+            "name": "disk_size",
+            "options": [
+                "100",
+                "200",
+                "500"
+            ],
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": false,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "INT",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "constraints": "Unconstrained",
+            "description": null,
+            "destination": "Both",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "label": "Expiration Date",
+            "name": "expiration_date",
+            "options": [],
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": true,
+            "type": "DT",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": true,
+            "available_all_servers": false,
+            "constraints": "Unconstrained",
+            "description": "",
+            "destination": "Build Items",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "label": "TestStore",
+            "name": "test_store",
+            "options": [
+                1,
+                2
+            ],
+            "placeholder": "",
+            "relevant_osfamilies": [],
+            "required": false,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STOR",
+            "value_pattern_string": null
+        },
+        {
+            "constrained_options": "No options",
+            "destination": "Both",
+            "include-applications": false,
+            "include-os-build": false,
+            "label": "Server Size",
+            "name": "vm_size",
+            "options": [
+                {
+                    "display-order": 1.0,
+                    "parameter-values": [
+                        {
+                            "parameter-name": "mem_size",
+                            "value": "8"
+                        },
+                        {
+                            "parameter-name": "cpu_cnt",
+                            "value": "4"
+                        }
+                    ],
+                    "value": "large"
+                },
+                {
+                    "display-order": 1.0,
+                    "parameter-values": [
+                        {
+                            "parameter-name": "mem_size",
+                            "value": "4"
+                        },
+                        {
+                            "parameter-name": "cpu_cnt",
+                            "value": "2"
+                        }
+                    ],
+                    "value": "medium"
+                },
+                {
+                    "display-order": 1.0,
+                    "parameter-values": [
+                        {
+                            "parameter-name": "mem_size",
+                            "value": "1"
+                        },
+                        {
+                            "parameter-name": "cpu_cnt",
+                            "value": "1"
+                        }
+                    ],
+                    "value": "small"
+                }
+            ],
+            "parameters": [
+                {
+                    "available-all-servers": false,
+                    "description": null,
+                    "field-dependency-controlling-set": [],
+                    "field-dependency-dependent-set": [],
+                    "global-options": [],
+                    "label": "CPUs",
+                    "name": "cpu_cnt",
+                    "relevant-osfamilies": [],
+                    "required": true,
+                    "show-as-attribute": false,
+                    "show-on-servers": false,
+                    "type": "INT"
+                },
+                {
+                    "available-all-servers": false,
+                    "description": null,
+                    "field-dependency-controlling-set": [],
+                    "field-dependency-dependent-set": [],
+                    "global-options": [],
+                    "label": "Mem Size",
+                    "name": "mem_size",
+                    "relevant-osfamilies": [],
+                    "required": true,
+                    "show-as-attribute": false,
+                    "show-on-servers": false,
+                    "type": "DEC"
+                }
+            ],
+            "type": "preconfig"
+        }
+    ],
+    "resource_name_template": null,
+    "resource_type": {
+        "icon": "",
+        "id": "RT-4c24dg2d",
+        "label": "Service",
+        "lifecycle": "ACTIVE",
+        "list_view_columns": [],
+        "name": "service",
+        "plural_label": null
+    },
+    "sequence": 0,
+    "show_recipient_field_on_order_form": false,
+    "teardown_items": []
+}
