@@ -14,17 +14,6 @@
             "run_on_scale_up": true,
             "show_on_order_form": true,
             "tier_type": "plugin"
-        },
-        {
-            "continue_on_failure": false,
-            "deploy_seq": 2,
-            "description": "For quickly generating successful orders",
-            "execute_in_parallel": false,
-            "id": "BDI-cfbmhe5v",
-            "name": "test_easy_order_success_with_input",
-            "restrict_execution_scope": true,
-            "show_on_order_form": true,
-            "tier_type": "blueprint"
         }
     ],
     "description": "",
